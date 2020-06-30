@@ -39,22 +39,19 @@ def score():
     print("Grade: %s Hit: %i Miss: %i Percentage: %f" % (g,hit,miss,s))
 
 intro=" Welcome to Multiply!!! Good luck! "
-use='''To play: answer the question, then at the prompt:
+use='''To play, answer the question, then at the prompt:
 Type n for the next question. Type r for rundown mode.
 Type a number between 0 and 12 to see that number's table.
 Enter any other key to quit.'''
-print()
 print(colors.fg.yellow,colors.bold,colors.underline)
 print(intro.center(75,'*'))
 print(colors.reset)
-print()
 print(colors.fg.cyan,colors.bold)
 print(use)
 
 choice="n"
 
 while choice == "n":
-    print()
     print(colors.reset)
     print(colors.fg.yellow,colors.bold)
     prompt=prompts[random.randint(0,len(prompts)-1)]
@@ -83,7 +80,6 @@ while choice == "n":
         print("%i X %i = %i" % (a,b,solution))
         miss = miss + 1
     
-    print()
     print(colors.fg.yellow,colors.bold)
     choice=input(":")
     if choice == "n":
